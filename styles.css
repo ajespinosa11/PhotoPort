@@ -1,0 +1,248 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+  line-height: 1.6;
+  background-color: #F1EEDC;
+  
+}
+
+header {
+  background-color: rgba(1, 12, 34, 0.836);
+  color: white;
+  padding: 10px;
+  font-family: "Sedan", serif;
+}
+
+/*navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  position: relative;
+  overflow: hidden;
+  padding: 20px 40px;
+}
+
+nav ul li a::before,
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(243, 236, 236, 0.384);
+  transition: transform.3s;
+  transform-origin: center;
+}
+
+nav ul li a::before {
+  transform: scaleX(0) scaleY(0);
+}
+
+nav ul li a::after {
+  transform: scaleX(1) scaleY(1);
+  transform-origin: center;
+}
+
+nav ul li a:hover::before {
+  transform: scaleX(1) scaleY(1);
+}
+
+nav ul li a:hover::after {
+  transform: scaleX(0) scaleY(0);
+}
+
+
+
+
+.header-title h1 .header-subtitle{
+  font-family: "Sedan", serif;
+  color: white;
+
+}
+.header-title h1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 40px;
+  letter-spacing: 5px;
+}
+
+.header-subtitle {
+  font-size: 20px;
+  font-style: italic;
+  display: flex;
+  justify-content: center;
+ 
+  
+}
+
+ 
+
+parent-container {
+  display: flex;
+  align-items: center;
+  border: 2px solid #3C486B;
+}
+
+/*
+.parent-container > div:nth-of-type(1) {
+  background: linear-gradient(to right, #042e36, #a9c2c2);
+}
+*/
+
+
+.container {
+   
+  display: flex;
+  justify-content: center;
+  height: 500px;
+  gap: 10px;
+  padding-top: 40px;
+  padding-left: 30px;
+  padding-bottom: 50px;
+
+  > div {
+    flex: 0 0 300px;
+    border-radius: 0.5rem;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+    box-shadow: 1px 5px 15px #f89292;
+    position: relative;
+    overflow: hidden;
+
+    &:nth-of-type(1) {
+      background: url("img/lamp.jpg")
+        no-repeat 50% / cover;
+    }
+    &:nth-of-type(2) {
+      background: url("img/cityhall.jpg")
+        no-repeat 50% / cover;
+    }
+    &:nth-of-type(3) {
+      background: url("img/church.jpg")
+        no-repeat 50% / cover;
+    }
+ 
+
+    .content {
+      font-size: 1.2rem;
+      color: #fff;
+      display: flex;
+      align-items: left;
+      padding: 15px;
+      opacity: 0;
+      flex-direction: column;
+      height: 100%;
+      justify-content: flex-end;
+      background: rgb(2, 2, 46);
+      background: linear-gradient(
+        0deg,
+        rgba(153, 11, 11, 0.548) 0%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      transform: translatey(100%);
+      transition: opacity 0.5s ease-in-out, transform 0.5s 0.2s;
+      visibility: hidden;
+
+      span {
+        display: block;
+        margin-top: 5px;
+        font-size: 1.0rem;
+      }
+    }
+
+    &:hover {
+      flex: 0 0 350px;
+      box-shadow: 1px 3px 15px #7645d8;
+      transform: translatey(-12px);
+    }
+
+    &:hover .content {
+      opacity: 1;
+      transform: translatey(0%);
+      visibility: visible;
+    }
+  }
+}
+
+.team-container {
+  display: inline-block;
+  background-color: transparent;
+  margin-top: 50px;
+  padding-left: 40px;
+  padding-right: 40px;
+  border-radius: 5px;
+  box-shadow: none;
+  background: linear-gradient(to right, #E5DDC5, #FFEFEF);
+  
+}
+
+.team-container h2 {
+  padding-top: 20px;
+  padding-bottom: 10px;
+  font-family: "Abril Fatface", serif;
+  color: #3C486B;
+  letter-spacing: 5px;
+  font-size: 35px;
+}
+
+.team-container p{
+  padding-top: 20px;
+  font-size: 17px;
+  text-align: justify;
+  letter-spacing: 1.5px;
+  font-family: "Sedan", serif;
+}
+
+.my-button {
+  position: relative;
+  z-index: 1;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 50px;
+  background-color: #af4c4c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+  line-height: 50px;
+}
+
+.my-button:hover {
+  background-color: #8b2e2e;
+  transition: background-color 0.3s ease;
+} 
+
+
