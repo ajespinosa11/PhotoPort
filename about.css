@@ -1,0 +1,51 @@
+img {
+  --g: 4px;     /* the gap */
+  --b: 10px;    /* border thickness*/
+  --c: #05355d; /* the color */
+  width: auto; /* adjust this to your desired width */
+  height: 550px; /* adjust this to your desired height */
+  margin: 20px 50px 0 40px;
+  padding: calc(var(--g) + var(--b));
+  --_c: #0000 0 25%, var(--c) 0 50%;
+  --_g1: repeating-linear-gradient(90deg,var(--_c)) repeat-x;
+  --_g2: repeating-linear-gradient(180deg,var(--_c)) repeat-y;
+  background:
+    var(--_g1) var(--_p, 25%) 0  ,var(--_g2) 0    var(--_p,125%),
+    var(--_g1) var(--_p,125%) 100%,var(--_g2) 100% var(--_p, 25%);
+  background-size: 200% var(--b),var(--b) 200%;
+  cursor: pointer;
+  filter: grayscale(50%);
+  transition:.3s;
+  display: block;
+
+  float: left;
+
+  
+}
+img:hover {
+  --_p: 75%;
+  filter: grayscale(0%);
+}
+
+.about {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  margin-right: 20px;
+}
+
+
+
+.about .paragraph-container {
+  overflow: hidden; /* Clear the float */
+  font-family: "Sedan", serif;
+  
+
+}
+.about .paragraph-container p {
+  margin-top: 12em;
+  margin-right: 25px;
+  padding: 20px;
+  text-align: center;
+  
+}
